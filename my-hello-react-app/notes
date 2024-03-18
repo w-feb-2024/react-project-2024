@@ -5,15 +5,15 @@
 - how do we create a react project ?
 ------------------------------------
 	- CRA (create-react-app)
-
+        - outdated
 	- vite
-		- speed and performance
+		- popularity for its speed and performance
 		- bundling time is less, almost half the time CRA takes. beacause it uses ESModule bundling whereas CRA uses webpack	
 		- HMR - Hot module replacement
 - lets create a reat project using vite
 ----------------------------------------
     - create a folder and open it in vscode
-    - open the terminal in vscode and type the command
+    - open the terminal in vscode(ctrl + `) and type the command
             npm create vite@latest
     - will ask for some options like name of project(give a name), framework(choose react - though react is not a framework), underlying language (choose javascript) 
     - now a react project is created without node modules folder
@@ -21,13 +21,30 @@
         cd <project name>
     - now install node modules using
         npm install
-            - this command will create the nodes modules based on package.json
+            - this command will create the nodes modules folder based on package.json
     - now run the dev server
         npm run dev
-            - remember this is only a dev server and not a production grade server
-
+            - remember this is only a development server and not a production grade server
+            - mostly we use nginx as a production server
     - open a browser and copy the url displayed to see the index.html file of your react app
         http://localhost:5174/
 
 
-nginx
+jsx
+    - javascript xml
+    - an extension of javascript
+    - generally in JS we cannot wirte Html
+    - but in JSX we can write html tags in JS
+    - react uses JSX
+
+components are the building blocks of react
+component is a section/part of the webpage
+components are reusable
+we already have a component called App
+this is the root component
+now we have to create our own componens and use them
+
+public folder vs src/assets folder
+----------------------------------
+- the assets inside the public folder is not bundled with the react project
+- the assets inside the src/assets folder is bundled with the react project
