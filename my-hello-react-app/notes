@@ -1,0 +1,33 @@
+
+- ReactJs is not a framework, it is a library
+- to create a react project we need npm(node package manager)
+- we get the npm from node js and hence we have to install node js to create a react project
+- how do we create a react project ?
+------------------------------------
+	- CRA (create-react-app)
+
+	- vite
+		- speed and performance
+		- bundling time is less, almost half the time CRA takes. beacause it uses ESModule bundling whereas CRA uses webpack	
+		- HMR - Hot module replacement
+- lets create a reat project using vite
+----------------------------------------
+    - create a folder and open it in vscode
+    - open the terminal in vscode and type the command
+            npm create vite@latest
+    - will ask for some options like name of project(give a name), framework(choose react - though react is not a framework), underlying language (choose javascript) 
+    - now a react project is created without node modules folder
+    - now use
+        cd <project name>
+    - now install node modules using
+        npm install
+            - this command will create the nodes modules based on package.json
+    - now run the dev server
+        npm run dev
+            - remember this is only a dev server and not a production grade server
+
+    - open a browser and copy the url displayed to see the index.html file of your react app
+        http://localhost:5174/
+
+
+nginx
