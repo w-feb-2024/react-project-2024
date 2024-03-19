@@ -1,0 +1,24 @@
+.head2{
+    width: 25%;
+    font-size: 25px;
+    border: 5px solid gold;
+    color: red;
+    margin: 20px;
+    padding: 20px;
+}
+
+.button1{
+    border: 2px solid red;
+    background-color: gold;
+    color: red;
+    margin: 30px;
+    padding: 20px;
+}
+
+.span1{
+    border: 2px solid gold;
+    color: red;
+    margin: 30px;
+    padding: 20px;
+    font-size: 40px;;
+}

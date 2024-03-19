@@ -10,7 +10,7 @@
 		- popularity for its speed and performance
 		- bundling time is less, almost half the time CRA takes. beacause it uses ESModule bundling whereas CRA uses webpack	
 		- HMR - Hot module replacement
-- lets create a reat project using vite
+- lets create a react project using vite
 ----------------------------------------
     - create a folder and open it in vscode
     - open the terminal in vscode(ctrl + `) and type the command
@@ -24,11 +24,11 @@
             - this command will create the nodes modules folder based on package.json
     - now run the dev server
         npm run dev
+            - this will start the development server
             - remember this is only a development server and not a production grade server
-            - mostly we use nginx as a production server
+            - mostly for front end applications we use nginx as a production server
     - open a browser and copy the url displayed to see the index.html file of your react app
         http://localhost:5174/
-
 
 jsx
     - javascript xml
@@ -44,7 +44,40 @@ we already have a component called App
 this is the root component
 now we have to create our own componens and use them
 
+components can be create using
+    - class based components
+        - if we want to work with life cycle methods, earlier we were able to use it only in class based components
+    - function based components
+        - preferred for its simplicity
+        - later versions of react started supporting react hooks which can be used in function components
+        - react hooks are equivalent to the lifecycle methods that was used in class based components
+
 public folder vs src/assets folder
 ----------------------------------
 - the assets inside the public folder is not bundled with the react project
 - the assets inside the src/assets folder is bundled with the react project
+
+how to include CSS in react?
+----------------------------
+3 ways
+    1. External CSS
+        - it refers to index.css
+        - this css file provides global styling to all the elements in the components
+        - high possibility of css class names getting clashed
+        - instead we can go for Module CSS
+    2. Module CSS - we will use this
+        - each component will have its own css file
+        - here we will create module css file
+        - for Fruits.jsx the css file will Fruits.module.css
+        - advantage of module.css
+            - the css class is applied by hashing it
+            - because of this we can be 100% sure that no other css style will have the same class
+    3. Inline CSS
+        - here we can use the style atrrubute on the html element
+
+props in React
+--------------
+    - we can work with parent components and child components
+    - we place one component on another component
+    - we may want to send data from parent component to child component 
+    - this data can be sent using props
