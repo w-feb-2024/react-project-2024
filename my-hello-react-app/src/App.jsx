@@ -4,6 +4,7 @@ import ActorList from "./components/actors/ActorList";
 import Fruits from "./components/fruits/Fruits";
 import Counter from "./components/counter/Counter";
 import Todo from "./components/todo/Todo";
+import StudentAddForm from "./components/student-form/StudentAddForm";
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       {/* <Fruits/> */}
       {/* <ActorList></ActorList> */}
       {/* <Counter></Counter> */}
-      <Todo></Todo>
+      {/* <Todo></Todo> */}
+      <StudentAddForm></StudentAddForm>
     </>
     
   );
