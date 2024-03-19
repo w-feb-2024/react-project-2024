@@ -1,0 +1,32 @@
+.head2{
+    border: 5px solid darkolivegreen;
+    color: darkolivegreen;
+    margin: 20px;
+    padding: 10px;
+    font-size: 20px;
+    width: 30%;
+}
+
+.input1{
+    border: 1px solid orange;
+    margin: 20px;
+    padding: 10px;
+    width: 300px;
+}
+
+.button1{
+    background-color: orange;
+    color: darkolivegreen;
+    font-weight: bolder;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.items{
+    background-color: darkolivegreen;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    width: 400px
+}

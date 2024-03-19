@@ -39,11 +39,12 @@ function Counter(){
     //let count = 0;
     const handleIncrement = () => {
         //count = count + 1;
-        setCount(count + 1); // look for state updater functions
-        setCount(count + 1);
-        setCount(count + 1);
-        setCount(count + 1);
-        setCount(count + 1);
+
+        setCount(prevCount=>prevCount + 1); // look for state updater functions
+        setCount(prevCount=>prevCount + 1);
+        setCount(prevCount=>prevCount + 1);
+        setCount(prevCount=>prevCount + 1);
+        setCount(prevCount=>prevCount + 1);
     }
     const handleDecrement = () => {
         //count = count - 1;

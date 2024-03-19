@@ -3,6 +3,7 @@ import Display from "./components/Display";
 import ActorList from "./components/actors/ActorList";
 import Fruits from "./components/fruits/Fruits";
 import Counter from "./components/counter/Counter";
+import Todo from "./components/todo/Todo";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       <ButtonMessage/> */}
       {/* <Fruits/> */}
       {/* <ActorList></ActorList> */}
-      <Counter></Counter>
+      {/* <Counter></Counter> */}
+      <Todo></Todo>
     </>
     
   );

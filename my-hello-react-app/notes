@@ -81,3 +81,8 @@ props in React
     - we place one component on another component
     - we may want to send data from parent component to child component 
     - this data can be sent using props
+
+state in component
+-------------------
+
+
