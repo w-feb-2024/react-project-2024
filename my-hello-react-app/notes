@@ -57,6 +57,11 @@ public folder vs src/assets folder
 - the assets inside the public folder is not bundled with the react project
 - the assets inside the src/assets folder is bundled with the react project
 
+how to create a funtion based component?
+----------------------------------------
+
+
+
 how to include CSS in react?
 ----------------------------
 3 ways
@@ -73,7 +78,7 @@ how to include CSS in react?
             - the css class is applied by hashing it
             - because of this we can be 100% sure that no other css style will have the same class
     3. Inline CSS
-        - here we can use the style atrrubute on the html element
+        - here we can use the style attribute on the html element
 
 props in React
 --------------
@@ -82,7 +87,85 @@ props in React
     - we may want to send data from parent component to child component 
     - this data can be sent using props
 
-state in component
--------------------
+React Hooks
+-----------
+    - gives functional components access to use the states and manage side effects
+    - it was introduced in React v16.8
+    - make sure not to use react hooks in class based components, they are meant only
+         for function based components
+    - they generally start with use
+    - eg: useState(), useEffect(), useContext(), useReducer(), useCallBack() and many more
+
+useState()
+----------
+    - a react hook that basically allows the creation of a stateful variable and a setter function to update its value in the virtual DOM
+    - an ordinary variable if changed does not get updated in the DOM
+
+Handling form and form validation in React
+------------------------------------------
+    - create the necessary form
+    - as and when we make changes to the form data/elements capture it inside student state object
+    - when the form is submitted , stop the submission
+    - and start validating the student object properties
+    - accumulate all the validation errors in an object and store in a state object called errors
+    - display the error messages which in errors state object below each form input element
 
 
+React routing on client side
+----------------------------
+    - here we can move/navigate from one component to another component
+    - this is called routing on the client side
+    - for this we will use react-router-dom
+    - and react-router-dom is not available by default in the node_module - check in package.json
+    - so now install react-router-dom library
+            npm install react-router-dom
+    - now lets start with routing
+    - general steps
+        - first configure route paths for the components
+            - for this we will use createBrowserRouter()
+            - <BrowserRouter> is outdated, it was used earlier and still some app uses it
+            - we will configure the route paths in main.jsx using createBrowserRouter()
+        - second use <RouterProvider>which will list all the route paths
+            - specify this in main.jsx and comment out <App/>
+    - routing with <Header> and hyperlinks
+    --------------------------------------
+        - create Header component
+            - use <Link> instead <a>. 
+            - <a> will reload the entire page from server. This kills the purpose of SPA in front end.
+        - make some changes in the route variable in main.jsx
+            const route = createBrowserRouter([
+            {
+                path: "/",
+                element: <App />,
+                children: [
+                { path: "/display", element: <Display />},
+                { path: "/counter", element: <Counter />},
+                { path: "/todo", element: <Todo />},
+                { path: "/student-add", element: <StudentAddForm />}
+                ],
+            },
+            ]);
+        - in App.jsx include <Header/> and below that use <Outlet/>
+        - <Outlet/> tells where the routed component should be displayed
+    - working with route parameters
+    -------------------------------
+
+
+fetch API to consume endpoints from backend
+-------------------------------------------
+    - we will use fetch API to consume the endpoints of back end application
+    - fetch api is provided by javascript and not react
+    - other apis are axios
+    - we will create a component which comsumes a fake endpoint provided by
+
+    
+
+
+creating bms-front-end
+----------------------
+
+
+
+further
+-------
+React + Redux(state management)
