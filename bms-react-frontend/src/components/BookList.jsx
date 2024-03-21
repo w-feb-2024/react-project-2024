@@ -1,7 +1,10 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from 'react-router-dom';
 import { deleteBook, fetchAllBooks } from "../services/BookService";
 
 function BookList(){
+    const navigate = useNavigate();
+
     let [allBooks, setAllBooks] = useState([]);
 
     useEffect(() => {
@@ -24,6 +27,12 @@ function BookList(){
             .catch((error)=>console.log(error));
     }
 
+    const viewBook = (bookId)=> {
+        // route to /book-view
+        // while routing send the bookId as a route parameter
+        // we will use useNavigate() react hook
+        navigate('/book-view/'+bookId);
+    }
     const allBooksDisplay = allBooks.map((eachBook, index) => 
                 <tr key={index}>
                     <td>{eachBook.bookId}</td>
@@ -33,7 +42,7 @@ function BookList(){
                     <td>{eachBook.bookGenre}</td>
                     <td>{eachBook.bookPublished}</td>
                     <td>Rs. {eachBook.bookPrice}</td>
-                    <td><button type="button" className="btn btn-warning">View</button></td>
+                    <td><button type="button" className="btn btn-warning" onClick={()=>viewBook(eachBook.bookId)}>View</button></td>
                     <td><button type="button" className="btn btn-primary">Edit</button></td>
                     <td><button type="button" className="btn btn-danger" onClick={()=>removeBook(eachBook.bookId)}>Remove</button></td>
                 </tr>                  

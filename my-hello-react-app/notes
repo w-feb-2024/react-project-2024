@@ -157,6 +157,12 @@ React routing on client side
             ]);
         - in App.jsx include <Header/> and below that use <Outlet/>
         - <Outlet/> tells where the routed component should be displayed
+    - routing can be done in 2 ways
+    -------------------------------
+        1. using <Link>
+            - used when we want to route by clicking on a link
+        2. using useNavigate() hook
+            - used when we want to route by clicking on a button that calls a method
     - working with route parameters
     -------------------------------
 
@@ -173,7 +179,7 @@ fetch API to consume endpoints from backend
 
 creating bms-front-end
 ----------------------
-
+    - make sure to use @CrossOrigin annotation above the controller classes in the backend application
 
 
 further
