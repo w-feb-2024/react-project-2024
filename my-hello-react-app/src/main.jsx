@@ -9,6 +9,7 @@ import Display from "./components/Display.jsx";
 import Counter from "./components/counter/Counter.jsx";
 import Todo from "./components/todo/Todo.jsx";
 import Fruits from "./components/fruits/Fruits.jsx";
+import UserList from "./components/users-fetch-api/UserList.jsx";
 
 // const route = createBrowserRouter([
 //   {
@@ -41,7 +42,8 @@ const route = createBrowserRouter([
       { path: "/display", element: <Display />},
       { path: "/counter", element: <Counter />},
       { path: "/todo", element: <Todo />},
-      { path: "/student-add", element: <StudentAddForm />}
+      { path: "/student-add", element: <StudentAddForm />},
+      { path: "/user-list", element: <UserList />}
     ],
   },
 ]);

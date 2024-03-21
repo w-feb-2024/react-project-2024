@@ -101,6 +101,16 @@ useState()
     - a react hook that basically allows the creation of a stateful variable and a setter function to update its value in the virtual DOM
     - an ordinary variable if changed does not get updated in the DOM
 
+useEffect()
+-----------
+    - a react hook that tells React to do some code when (pick one)
+        1. this components renders
+        2. this component mounts
+        3. the state value is changed
+    - a useEffect hook looks like ----> useEffect(function, [dependencies])
+    - useEffect(() => {})                     // runs after every re-render
+    - useEffect(() => {}, [])                 // runs only on mount
+    - useEffect(() => {}, [statevariable])    // run on mount + when state value changes
 Handling form and form validation in React
 ------------------------------------------
     - create the necessary form

@@ -18,9 +18,13 @@ function Header(){
                 <Link to='student-add'>Student Component</Link> ||
             </span>
             <span>
-                {/* <a href='/counter'>Counter Component</a> || */}
+                {/* <a href='/student-add'>Student Component</a> || */}
                 <Link to='counter'>Counter Component</Link> ||
             </span>
+            <span>
+                <Link to='user-list'>User List Component</Link> ||
+            </span>
+
         </h3>
         </>
     );
