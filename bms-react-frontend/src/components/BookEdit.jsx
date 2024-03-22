@@ -1,10 +1,11 @@
+import { fetchABook, updateBook } from "../services/BookService";
 import { useState, useEffect } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { fetchAllAuthors } from "../services/AuthorService";
-import { addBook } from "../services/BookService";
 
-function BookAdd(){
+function BookEdit(){
     let navigate = useNavigate();
+    let { bookId } = useParams();
     let [allAuthors, setAllAuthors] = useState([]);
     let [errors, setErrors] = useState({});
     let [formBookData, setFormBookData] = useState({
@@ -23,6 +24,11 @@ function BookAdd(){
             .then((data)=>{
                 //console.log(data);
                 setAllAuthors(data);
+                fetchABook(bookId)
+                    .then((response)=>response.json())
+                    .then((data)=>{
+                        console.log(data);
+                    })
             })
     }, []);
 
@@ -58,9 +64,9 @@ function BookAdd(){
             // we are good to send formBookData to the backend appln to be inserted in the db
             console.log(formBookData);
             const aid = formBookData.author;
-            let newBook = {...formBookData, author:{authorId: aid}};
-            console.log(newBook);
-            addBook(newBook)
+            let editBook = {...formBookData, author:{authorId: aid}};
+            console.log(editBook);
+            updateBook(editBook)
                 .then((response)=>navigate('/book-list'));
         }
 
@@ -75,8 +81,8 @@ function BookAdd(){
           <div className="col-6">
             <div className="card">
               <form onSubmit={handleSubmit}>
-                <div className="card-header bg-success text-white">
-                  <h2>ADD NEW BOOK</h2>
+                <div className="card-header bg-primary text-white">
+                  <h2>EDIT BOOK</h2>
                 </div>
                 <div className="card-body">
                   <div className="mb-3 mt-3">
@@ -154,12 +160,12 @@ function BookAdd(){
                     />
                   </div>
                 </div>
-                <div className="card-footer bg-success">
+                <div className="card-footer bg-primary">
                   <button
                     type="submit"
-                    className="btn btn-primary bg-white text-success mx-5"
+                    className="btn btn-primary bg-white text-primary mx-5"
                   >
-                    ADD
+                    UPDATE
                   </button>
                   <button
                     type="reset"
@@ -176,4 +182,4 @@ function BookAdd(){
       </div>
     </>);
 }
-export default BookAdd;
+export default BookEdit;

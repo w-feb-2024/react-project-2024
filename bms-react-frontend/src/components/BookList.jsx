@@ -33,6 +33,15 @@ function BookList(){
         // we will use useNavigate() react hook
         navigate('/book-view/'+bookId);
     }
+
+    const editBook = (bookId)=> {
+        navigate('/book-edit/'+bookId);
+    }
+    
+    const handleAddBook = () => {
+        navigate('/book-add');
+    }
+
     const allBooksDisplay = allBooks.map((eachBook, index) => 
                 <tr key={index}>
                     <td>{eachBook.bookId}</td>
@@ -43,7 +52,7 @@ function BookList(){
                     <td>{eachBook.bookPublished}</td>
                     <td>Rs. {eachBook.bookPrice}</td>
                     <td><button type="button" className="btn btn-warning" onClick={()=>viewBook(eachBook.bookId)}>View</button></td>
-                    <td><button type="button" className="btn btn-primary">Edit</button></td>
+                    <td><button type="button" className="btn btn-primary" onClick={()=>editBook(eachBook.bookId)}>Edit</button></td>
                     <td><button type="button" className="btn btn-danger" onClick={()=>removeBook(eachBook.bookId)}>Remove</button></td>
                 </tr>                  
             )
@@ -52,7 +61,7 @@ function BookList(){
         <>
         <div className="container m-5">
             <h1>LIST OF BOOKS</h1>
-            <button type="button" className="btn btn-success">ADD NEW BOOK</button>
+            <button type="button" className="btn btn-success" onClick={handleAddBook}>ADD NEW BOOK</button>
             <table className="table table-hover">
                 <thead>
                     <tr>

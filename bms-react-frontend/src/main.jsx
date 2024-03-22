@@ -6,6 +6,7 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import BookList from './components/BookList.jsx';
 import BookAdd from './components/BookAdd.jsx';
 import BookView from './components/BookView.jsx';
+import BookEdit from './components/BookEdit.jsx';
 
 const route = createBrowserRouter([
   {
@@ -16,6 +17,7 @@ const route = createBrowserRouter([
       {path: '/book-list', element: <BookList/>},
       {path: '/book-view/:bid', element: <BookView/>}, // here bid is a route parameter
       {path: '/book-add', element: <BookAdd/>},
+      {path: '/book-edit/:bookId', element: <BookEdit/>}
     ]
   }
 ]);

@@ -10,7 +10,11 @@ export const fetchABook = (bookId) => {
 }
 
 export const addBook = (newBook) => {
-    
+    return fetch(baseUrl, {
+                            method: 'POST',
+                            body: JSON.stringify(newBook),
+                            headers: {'Content-Type': 'application/json'}
+                          });
 }
 
 export const updateBook = (updateBook) => {

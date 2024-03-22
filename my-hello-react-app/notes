@@ -111,6 +111,18 @@ useEffect()
     - useEffect(() => {})                     // runs after every re-render
     - useEffect(() => {}, [])                 // runs only on mount
     - useEffect(() => {}, [statevariable])    // run on mount + when state value changes
+
+useNavigate()
+------------
+    - a react hook that is used to route to a component from a function of the component
+    
+useParams()
+----------
+    - associated with routing
+    - used to extract the route parameters from the rout url
+    - use object destructuring
+        const { bid } = useParams();
+
 Handling form and form validation in React
 ------------------------------------------
     - create the necessary form
